@@ -4,6 +4,8 @@ import hacker from "../../images/hacker.svg";
 import SocialIcons from "./SocialIcons";
 import { IoIosArrowDown } from "react-icons/io";
 
+import Links from "../Links";
+
 const Hero = () => {
   const [state, setState] = useState({
     data: ["Motivated", "Passionate", "Committed"],
@@ -11,7 +13,7 @@ const Hero = () => {
     speed: 300,
     pos: 0,
     turn: 0,
-    isTyping: false
+    isTyping: false,
   });
 
   const typing = () => {
@@ -20,7 +22,7 @@ const Hero = () => {
         ...state,
         text: (state.text += state.data[state.turn].charAt(state.pos)),
         pos: state.pos + 1,
-        isTyping: true
+        isTyping: true,
       });
     } else {
       setState({
@@ -28,7 +30,7 @@ const Hero = () => {
         pos: 0,
         text: "",
         isTyping: false,
-        turn: state.turn + 1
+        turn: state.turn + 1,
       });
     }
   };
@@ -41,37 +43,30 @@ const Hero = () => {
           pos: 0,
           isTyping: false,
           turn: 0,
-          text: ""
+          text: "",
         });
       }, 500);
     } else {
       typing();
     }
   }, state.speed);
+
   return (
     <Fragment>
-      <div className="header-container" id="#home">
+      <div className="header-container">
         <Navbar />
         <div className="header-content">
           <div className="header-text">
             <h1>
-              Hello, <span>&#9996;</span> <br />
+              Hi, <span>&#9996;</span> <br />
               I'm <span className="name">Radu</span>
             </h1>
             <h3 className="header-slogan">
-              A{" "}
-              <span className="header-typing">
-                {state.isTyping ? state.text : <></>}{" "}
-              </span>{" "}
-              Developer
+              <span className="header-span">Full-Stack</span> Developer
             </h3>
           </div>
-          <div className="header-image-side">
-            <div className="header-image">
-              <img className="hacker-img" src={hacker} alt="hacker" />
-            </div>
-            <SocialIcons />
-          </div>
+          <SocialIcons />
+          <Links />
         </div>
         <div className="arrow-down">
           <IoIosArrowDown />

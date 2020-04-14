@@ -8,14 +8,14 @@ import Contact from "./components/ContactSection/Contact";
 function App() {
   return (
     <React.Fragment>
-      <div className="background-design">
-        <Hero />
-        <div className="container">
-          <About />
-          <Projects />
-          <Contact />
-        </div>
+      {/* <div className="background-design"> */}
+      <Hero />
+      <div className="container">
+        <About />
+        <Projects />
+        <Contact />
       </div>
+      {/* </div> */}
     </React.Fragment>
   );
 }

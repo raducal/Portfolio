@@ -3,7 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
 
 const SocialIcons = () => {
   return (
-    <div>
+    <div className="social-div">
       <ul className="social-icons-list">
         <li className="social-icon">
           <a href="#">
