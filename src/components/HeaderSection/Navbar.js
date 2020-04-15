@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [nav, setNav] = useState(true);
@@ -21,7 +22,7 @@ const Navbar = () => {
   }, []);
 
   const handleBurgerClick = () => {
-    setActive(true);
+    setActive(!active);
   };
 
   return (
@@ -31,25 +32,62 @@ const Navbar = () => {
           <div className="logo"></div>
         </div>
         <div style={{ display: "flex", alignItems: "center" }}>
-          <ul className={!active ? "nav-links" : "nav-links-mobile"}>
+          <ul className={`nav-links ${active ? "open" : ""}`}>
             <li className="nav-list">
-              <a className="nav-link" href="#home">
+              <Link
+                className="nav-link"
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+              >
                 Home
-              </a>
+              </Link>
             </li>
             <li className="nav-list">
-              <a className="nav-link" href="#">
+              <Link
+                className="nav-link"
+                activeClass="active"
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li className="nav-list">
-              <a className="nav-link" href="#">
+              <Link
+                className="nav-link"
+                activeClass="active"
+                to="project"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={500}
+              >
                 Projects
-              </a>
+              </Link>
+            </li>
+            <li className="nav-list">
+              <Link
+                className="nav-link"
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-50}
+                duration={700}
+              >
+                Contact
+              </Link>
             </li>
           </ul>
           <div onClick={handleBurgerClick} className="burger">
-            <div className="line"></div>
+            <div className={`line ${active ? "active" : ""}`}></div>
           </div>
         </div>
       </div>

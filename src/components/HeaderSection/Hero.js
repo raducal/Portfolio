@@ -1,8 +1,8 @@
 import React, { Fragment, useEffect, useState } from "react";
 import Navbar from "./Navbar";
-import hacker from "../../images/hacker.svg";
 import SocialIcons from "./SocialIcons";
 import { IoIosArrowDown } from "react-icons/io";
+import { Link } from "react-scroll";
 
 import Links from "../Links";
 
@@ -52,7 +52,7 @@ const Hero = () => {
   }, state.speed);
 
   return (
-    <Fragment>
+    <section id="home">
       <div className="header-container">
         <Navbar />
         <div className="header-content">
@@ -68,11 +68,19 @@ const Hero = () => {
           <SocialIcons />
           <Links />
         </div>
-        <div className="arrow-down">
+        <Link
+          className="arrow-down"
+          activeClass="active"
+          to="project"
+          spy={true}
+          smooth={true}
+          offset={-50}
+          duration={500}
+        >
           <IoIosArrowDown />
-        </div>
+        </Link>
       </div>
-    </Fragment>
+    </section>
   );
 };
 

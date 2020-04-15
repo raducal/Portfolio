@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
+/* @import url("https://fonts.googleapis.com/css?family=Monoton&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Alex+Brush|Lato|Roboto&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap'); */
 
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dosis:wght@300&family=Lato:wght@300&family=Monoton&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playball&display=swap");
 /* 
 font-family: 'Lato', sans-serif;
 font-family: 'Alex Brush', cursive;
@@ -16,9 +19,10 @@ font-family: 'Roboto', sans-serif;
 body {
   font-size: 1.1rem;
   font-family: "Lato", sans-serif;
+  font-weight: 500;
   letter-spacing: 0.1rem;
   line-height: 1.5;
-  /* color: #e0e0e0; */
+  color: #000;
 }
 
 /* UTILITIES */
@@ -31,12 +35,6 @@ li {
   list-style: none;
 }
 
-@media only screen and (max-width: 1100px) {
-  li a {
-    color: #f7f7f7;
-  }
-}
-
 .section {
   padding-bottom: 3rem;
 }
@@ -47,10 +45,9 @@ li {
 }
 
 .btn-container {
-  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
 }
 
 .btn {
@@ -68,9 +65,16 @@ li {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  color: #eee;
   padding: 0.5rem;
   font-size: 0.9rem;
   background: lightseagreen;
+  transition: all 0.3s ease-in;
+  font-size: 1rem;
+}
+
+.contactBtn:hover {
+  background: royalblue;
 }
 
 .btn-link {
@@ -98,6 +102,11 @@ li {
   font-size: 1rem;
 }
 
+.btn-transparent:hover {
+  background: #333;
+  color: #eee;
+}
+
 .btn-link:hover {
   background: royalblue;
 }
@@ -110,13 +119,6 @@ li {
   border-radius: 50px;
   border: 2px solid #f7f7f7;
 }
-
-/* BACKGROUND FOR PAGE */
-.background-design {
-  background: #eee;
-  color: #222;
-}
-
 /* HEADER */
 
 .header-container {
@@ -145,7 +147,7 @@ li {
 }
 
 .header-text h1 {
-  font-size: 3.5rem;
+  font-size: 4rem;
 }
 
 .header-slogan {
@@ -157,13 +159,6 @@ li {
 .header-span {
   color: #1ebeb1;
 }
-
-/* .header-typing {
-  width: 2rem;
-  font-family: "Alex Brush", cursive;
-  color: cyan;
-  font-size: 2.3rem;
-} */
 
 /* HEADER IMAGE */
 
@@ -208,7 +203,7 @@ li {
 /* SOCIAL ICONS */
 .social-div {
   position: absolute;
-  right: 10%;
+  right: 5%;
   top: 50%;
   transform: translateY(-50%);
   display: none;
@@ -286,6 +281,7 @@ li {
 
 .nav-links li {
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 .nav-links li a {
@@ -293,17 +289,13 @@ li {
   z-index: 1;
   padding: 15px;
   text-decoration: none;
-  color: #555;
-  font-weight: 550;
+  color: #000;
+  font-weight: 600;
 }
 
-.nav-links-mobile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  background: #333;
+.nav-links.open {
+  transform: translateX(0%);
+  opacity: 1;
 }
 
 .burger {
@@ -312,6 +304,18 @@ li {
   height: 1.2rem;
   position: relative;
   cursor: pointer;
+}
+
+.line.active {
+  background: #fff;
+}
+
+.line.active::after {
+  background: #fff;
+}
+
+.line.active::before {
+  background: #fff;
 }
 
 .line {
@@ -441,17 +445,6 @@ li {
   align-items: center;
 }
 
-/* .heading-title-bg-black {
-  color: rgba(0, 0, 0, 0.3);
-  position: relative;
-  z-index: 7;
-  font-family: "Monoton", cursive;
-  font-size: 10rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .heading-title {
   position: absolute;
   z-index: 7;
@@ -510,6 +503,8 @@ li {
 
 .about-me-paragraph {
   padding-bottom: 1rem;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
 }
 
 .about-me-skills {
@@ -519,12 +514,15 @@ li {
   background: rgb(30, 190, 177);
   padding: 1.3rem;
   grid-template-columns: 1fr 1fr;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
 }
 
 /* PROJECTS SECTION */
 .projects {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
   column-gap: 4rem;
   row-gap: 2.5rem;
 }
@@ -533,7 +531,8 @@ li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 700px;
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  padding-top: 0.5rem;
 }
 
 .project-div {
@@ -541,22 +540,57 @@ li {
   height: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .project-description {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
   flex: 2;
   text-align: left;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+}
+
+.project-img-mobile {
+  display: flex;
+  align-self: center;
+  width: 40%;
+  height: 300px;
+}
+
+.project-img-stlr {
+  width: 55%;
+}
+
+.project-img {
+  height: 310px;
+}
+
+.project-description p {
+  font-size: 1rem;
+}
+
+.project-tech {
+  display: flex;
+  font-family: "Dosis", sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.project-tech p {
+  padding-right: 0.4rem;
+  color: #017a4c;
 }
 
 .project-title {
   text-align: center;
   color: #222;
   margin-bottom: 1.5rem;
-  font-family: "Alex Brush", cursive;
+  /* font-family: "Alex Brush", cursive; */
+  font-family: "Playball", cursive;
+  font-weight: 500;
 }
 
 .project-title h3 {
@@ -651,16 +685,43 @@ li {
   justify-content: center;
   opacity: 0.4;
   transform: rotate(-45deg);
+  cursor: pointer;
 }
 
 .link:hover {
   transform: translate(-2px, -2px);
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 900px) {
   /* NAVBAR */
   .nav-links {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    background: rgba(36, 35, 35, 0.9);
+    position: fixed;
+    transform: translateY(-200%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    transition: all 1s ease-out;
+  }
+
+  .nav-links li {
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .nav-links li a {
+    position: relative;
+    padding: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 550;
   }
 
   .burger {
@@ -668,14 +729,16 @@ li {
   }
   /* HEADER */
   .header-text {
-    margin: 0 1.2rem;
+    margin: 0 2.5rem;
   }
   .header-text h1 {
     font-size: 2.4rem;
   }
 
-  .header-text h3 {
+  .header-content {
+    grid-template-columns: 1fr;
   }
+
   .header-slogan {
     font-size: 1.3rem;
   }
@@ -700,7 +763,7 @@ li {
   }
   /* PORJECT */
   .projects {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     column-gap: 0;
   }
   .project {

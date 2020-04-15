@@ -2,9 +2,13 @@ import React from "react";
 import HeadingTitle from "../HeadingTitle";
 import SingleProject from "./SingleProject";
 
+import coding from "../../images/coding2.gif";
+import noteapp from "../../images/notesapp.gif";
+import stlr from "../../images/stlr.jpg";
+
 const Projects = () => {
   return (
-    <section className="section">
+    <section className="section" id="project">
       <HeadingTitle
         title="Projects"
         num="#"
@@ -14,28 +18,28 @@ const Projects = () => {
       <div className="relative-div">
         <div className="projects">
           <SingleProject
-            title="Recipe Cloud"
-            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptas quod expedita consequatur, architecto natus facilis numquam in odit animi placeat quisquam consequuntur assumenda reprehenderit perspiciatis aut nulla repudiandae reiciendis? Alias, suscipit autem. Unde maiores rem atque quaerat assumenda magnam?"
-            projectImageClass="project-image"
-            projectClass="project"
-            titleClass="project-title"
-            projectDesc="project-description"
+            title="Code Calendar"
+            desc="A Full-Stack web app built for those interested and/or taking part in the 100DaysOfCode challenge. | Users can create an account and start the challenge. The app shows the user date the challenge will end, how many days have gone by since the challenge started. Users can keep track of what they have learned on any day by leaving a note. | Users can earn 10 points everyday they login and for any new commites they have on github."
+            tech="Typescript React.js Node.js PostgreSQL"
+            projectImageSrc={coding}
+            projectImageClass="project-img"
+            active={false}
           />
           <SingleProject
             title="Contact Keeper"
-            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptas quod expedita consequatur, architecto natus"
-            projectImageClass="project-image-start"
-            projectClass="project-opposite"
-            titleClass="project-title-opposite"
-            projectDesc="project-description"
+            desc="Full-Stack mobile app built for personal use so that I could take notes on the fly and also have access to a scientific calculator whenever I may need it."
+            projectImageSrc={noteapp}
+            projectImageClass="project-img-mobile"
+            tech="React Native Node.js MongoDB"
+            active={true}
           />
           <SingleProject
-            title="Recipe Cloud"
-            desc="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo voluptas quod expedita consequatur, architecto natus facilis numquam in odit animi placeat quisquam consequuntur assumenda reprehenderit perspiciatis aut nulla repudiandae reiciendis? Alias, suscipit autem. Unde maiores rem atque quaerat assumenda magnam?"
-            projectImageClass="project-image"
-            projectClass="project"
-            titleClass="project-title"
-            projectDesc="project-description"
+            title="STLR App"
+            desc="Current final year project. Full-Stack mobile and web app that allows lecturers at TUD to keep track of which student has attended which STLR tagged events. | The app allows lecturers to display a qr code, which changes every 30 seconds to prevent cheating. The student scans the qr code using the mobile app and they are automatically marked as present for that event. "
+            projectImageSrc={stlr}
+            projectImageClass="project-img-mobile project-img-stlr"
+            tech="React.js React Native Node.js MongoDB"
+            active={"none"}
           />
         </div>
       </div>

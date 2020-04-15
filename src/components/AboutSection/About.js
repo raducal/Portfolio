@@ -1,11 +1,9 @@
 import React, { Fragment } from "react";
 import HeadingTitle from "../HeadingTitle";
-import man from "../../images/man-shape.svg";
-import Skills from "./Skills";
 
 const About = () => {
   return (
-    <section className="section">
+    <section className="section" id="about">
       <HeadingTitle
         title="About"
         num="#"
@@ -17,8 +15,9 @@ const About = () => {
           <p className="about-me-paragraph">
             A 4th year Computer Engineering student with a strong interest in
             Technology and a passion for Software Development. I'm obsessed with
-            creating things and learning something new everyday. If you have any
-            questions or just want to chat, don't hesistate to contact me.
+            creating things and learning. I'm enthusiastic, keen in learning new
+            technologies. <br /> If you have any questions or just want to chat,
+            don't hesistate to contact me.
           </p>
           <button className="contactBtn">Contact Me</button>
         </div>

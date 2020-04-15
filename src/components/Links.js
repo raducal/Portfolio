@@ -1,6 +1,8 @@
 import React from "react";
 
-import { FaGithub, FaEnvelope, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-scroll";
+
+import { FaGithub, FaEnvelope, FaLinkedin, FaLaptopCode } from "react-icons/fa";
 
 const Links = () => {
   return (
@@ -30,7 +32,17 @@ const Links = () => {
           </a>
         </div>
         <div class="link">
-          <a href=""></a>
+          <Link
+            className="link-contact"
+            activeClass="active"
+            to="project"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={500}
+          >
+            <FaLaptopCode size={60} />
+          </Link>
         </div>
       </div>
     </div>

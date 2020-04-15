@@ -1,28 +1,29 @@
 import React from "react";
 
-import coding from "../../images/coding2.gif";
-
 const SingleProject = ({
   title,
   desc,
-  projectClass,
+  projectImageSrc,
   projectImageClass,
-  titleClass,
-  projectDesc,
+  tech,
+  active,
 }) => {
-  return (
-    <div className="project">
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        <div className="project-title">
-          <h3>{title}</h3>
-        </div>
-        <img style={{ width: "100%" }} src={coding} alt="" />
-      </div>
-      <div className="project-div">
-        <div className="project-description">
-          <p>{desc}</p>
-        </div>
-        <div className="btn-container">
+  let para = desc.split("|");
+
+  const buttonsShow = () => {
+    if (active === "none") {
+      return null;
+    } else if (active === true) {
+      return (
+        <button className="btn">
+          <a href="#" className="btn-transparent">
+            Code
+          </a>
+        </button>
+      );
+    } else if (active === false) {
+      return (
+        <>
           <button className="btn">
             <a href="#" className="btn-link">
               Demo
@@ -33,7 +34,43 @@ const SingleProject = ({
               Code
             </a>
           </button>
+        </>
+      );
+    }
+  };
+  return (
+    <div className="project">
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          flex: 1,
+          width: "100%",
+        }}
+      >
+        <div className="project-title">
+          <h3>{title}</h3>
         </div>
+        <img className={projectImageClass} src={projectImageSrc} alt="" />
+      </div>
+      <div className="project-div">
+        <div className="project-description">
+          {para.map((p) => {
+            return (
+              <>
+                <p>{p}</p>
+                <br />
+              </>
+            );
+          })}
+        </div>
+        <div className="project-tech">
+          <p style={{ color: "#000" }}>Tech: </p>
+          {tech.split(" ").map((t) => {
+            return <p style={{ paddingRight: "0.3rem" }}>{t}</p>;
+          })}
+        </div>
+        <div className="btn-container">{buttonsShow()}</div>
       </div>
     </div>
   );
