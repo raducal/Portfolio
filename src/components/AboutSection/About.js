@@ -18,7 +18,7 @@ const About = () => {
             Technology and a passion for Software Development. I'm obsessed with
             creating things and learning. I'm enthusiastic, keen in learning new
             technologies. <br /> <br /> If you have any questions or just want
-            to chat, don't hesistate to contact me.
+            to chat, don't hesistate to contact me. <br />
           </p>
           {/* <button className="contactBtn">Contact Me</button> */}
           <Link
