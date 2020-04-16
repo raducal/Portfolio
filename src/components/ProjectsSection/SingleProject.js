@@ -67,7 +67,7 @@ const SingleProject = ({
         <div className="project-tech">
           <p style={{ color: "#000" }}>Tech: </p>
           {tech.split(" ").map((t) => {
-            return <p style={{ paddingRight: "0.3rem" }}>{t}</p>;
+            return <span style={{ paddingRight: "0.25rem" }}>{t}</span>;
           })}
         </div>
         <div className="btn-container">{buttonsShow()}</div>

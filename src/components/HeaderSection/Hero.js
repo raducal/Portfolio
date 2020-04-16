@@ -62,7 +62,7 @@ const Hero = () => {
               I'm <span className="name">Radu</span>
             </h1>
             <h3 className="header-slogan">
-              <span className="header-span">Full-Stack</span> Developer
+              <span className="header-span">Full-Stack </span> Developer
             </h3>
           </div>
           <SocialIcons />

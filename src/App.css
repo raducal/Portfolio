@@ -143,7 +143,7 @@ li {
   flex-direction: column;
   text-align: left;
   margin-left: auto;
-  margin-right: 2rem;
+  margin-right: 7rem;
 }
 
 .header-text h1 {
@@ -151,8 +151,7 @@ li {
 }
 
 .header-slogan {
-  height: 2rem;
-  width: 22rem;
+  width: 100%;
   font-size: 1.7rem;
 }
 
@@ -577,6 +576,7 @@ li {
   font-family: "Dosis", sans-serif;
   font-weight: 600;
   font-size: 1rem;
+  flex-wrap: wrap;
 }
 
 .project-tech p {
@@ -729,10 +729,10 @@ li {
   }
   /* HEADER */
   .header-text {
-    margin: 0 2.5rem;
+    margin-left: 2.5rem;
   }
   .header-text h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
   }
 
   .header-content {
@@ -769,6 +769,12 @@ li {
   .project {
     height: 100%;
     max-width: 100%;
+  }
+  .project-img {
+    height: 200px;
+  }
+  .project-img-mobile {
+    height: 200px;
   }
   .container {
     width: 100%;
