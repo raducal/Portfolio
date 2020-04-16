@@ -72,6 +72,7 @@ li {
   transition: all 0.3s ease-in;
   font-size: 1rem;
   font-family: "Dosis", sans-serif;
+  margin-top: 1rem;
 }
 
 .contactBtn:hover {
@@ -658,8 +659,8 @@ li {
 
 .links {
   background: #dfdfdf;
-  height: 50%;
-  width: 25%;
+  height: 250px;
+  width: 250px;
   display: grid;
   transform: rotate(45deg);
   grid-template-columns: 1fr 1fr;
@@ -691,6 +692,12 @@ li {
 
 .link:hover {
   transform: translate(-2px, -2px);
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 65%;
+  }
 }
 
 @media only screen and (max-width: 900px) {

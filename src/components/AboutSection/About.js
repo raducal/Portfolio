@@ -17,8 +17,8 @@ const About = () => {
             A 4th year Computer Engineering student with a strong interest in
             Technology and a passion for Software Development. I'm obsessed with
             creating things and learning. I'm enthusiastic, keen in learning new
-            technologies. <br /> If you have any questions or just want to chat,
-            don't hesistate to contact me.
+            technologies. <br /> <br /> If you have any questions or just want
+            to chat, don't hesistate to contact me.
           </p>
           {/* <button className="contactBtn">Contact Me</button> */}
           <Link

@@ -21,12 +21,12 @@ const Contact = () => {
             <div className="social-icon-contacts">
               <ul className="social-icon-contacts-list">
                 <li className="social-icon">
-                  <a href="#">
+                  <a href="https://ie.linkedin.com/in/radu-costica-911205183">
                     <FaLinkedin />
                   </a>
                 </li>
                 <li className="social-icon">
-                  <a href="#">
+                  <a href="https://github.com/raducostica">
                     <FaGithub />
                   </a>
                 </li>
