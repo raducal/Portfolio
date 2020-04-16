@@ -71,6 +71,7 @@ li {
   background: lightseagreen;
   transition: all 0.3s ease-in;
   font-size: 1rem;
+  font-family: "Dosis", sans-serif;
 }
 
 .contactBtn:hover {

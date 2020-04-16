@@ -7,6 +7,8 @@ const SingleProject = ({
   projectImageClass,
   tech,
   active,
+  demoLink,
+  codeLink,
 }) => {
   let para = desc.split("|");
 
@@ -16,7 +18,7 @@ const SingleProject = ({
     } else if (active === true) {
       return (
         <button className="btn">
-          <a href="#" className="btn-transparent">
+          <a href={codeLink} target="_blank" className="btn-transparent">
             Code
           </a>
         </button>
@@ -25,12 +27,12 @@ const SingleProject = ({
       return (
         <>
           <button className="btn">
-            <a href="#" className="btn-link">
+            <a href={demoLink} target="_blank" className="btn-link">
               Demo
             </a>
           </button>
           <button className="btn">
-            <a href="#" className="btn-transparent">
+            <a href={codeLink} target="_blank" className="btn-transparent">
               Code
             </a>
           </button>
@@ -65,7 +67,7 @@ const SingleProject = ({
           })}
         </div>
         <div className="project-tech">
-          <p style={{ color: "#000" }}>Tech: </p>
+          <p style={{ color: "#000" }}>Tools: </p>
           {tech.split(" ").map((t) => {
             return <span style={{ paddingRight: "0.25rem" }}>{t}</span>;
           })}

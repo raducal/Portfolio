@@ -1,5 +1,6 @@
 import React, { Fragment } from "react";
 import HeadingTitle from "../HeadingTitle";
+import { Link } from "react-scroll";
 
 const About = () => {
   return (
@@ -19,7 +20,18 @@ const About = () => {
             technologies. <br /> If you have any questions or just want to chat,
             don't hesistate to contact me.
           </p>
-          <button className="contactBtn">Contact Me</button>
+          {/* <button className="contactBtn">Contact Me</button> */}
+          <Link
+            className="contactBtn"
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-50}
+            duration={700}
+          >
+            Contact Me
+          </Link>
         </div>
         <div className="about-me-skills">
           <p style={{ fontSize: "13px" }}>Javascript</p>
