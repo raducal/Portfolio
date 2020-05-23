@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import HeadingTitle from "../HeadingTitle";
 import { Link } from "react-scroll";
 
