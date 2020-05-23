@@ -16,9 +16,11 @@ const About = () => {
           <p className="about-me-paragraph">
             A 4th year Computer Engineering student with a strong interest in
             Technology and a passion for Software Development. I'm obsessed with
-            creating things and learning. I'm enthusiastic, keen in learning new
-            technologies. <br /> <br /> If you have any questions or just want
-            to chat, don't hesistate to contact me. <br />
+            creating things and learning. I'm also extemely keen in learning new
+            technologies to further develop my skills and I am ready to tackle
+            any challenge thrown in my direction. <br /> <br /> If you have any
+            questions or just want to chat, don't hesistate to contact me.{" "}
+            <br />
           </p>
           {/* <button className="contactBtn">Contact Me</button> */}
           <Link
