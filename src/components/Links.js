@@ -27,7 +27,7 @@ const Links = () => {
           </a>
         </div>
         <div class="link">
-          <a href="mailto: radu.costica@hotmail.com" class="link-contact">
+          <a href="mailto:radu.costica@hotmail.com" class="link-contact">
             <FaEnvelope size={60} />
           </a>
         </div>
